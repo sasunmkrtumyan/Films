@@ -1,38 +1,201 @@
-.App {
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "STIX Two Text", serif;
+  font-weight: 400;
+  text-decoration: none;
+}
+
+.favorites {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+  background-image: linear-gradient(#474747, #b1b1b1, #474747);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.last-link {
+  text-align: end;
+}
+.input-flex {
+  display: flex;
+  flex-direction: column;
+}
+.home h1 {
+  padding-top: 100px;
+  text-align: center;
+  font-style: italic;
+  font-size: 40px;
+  color: rgb(138, 252, 252);
+  text-decoration: underline;
+}
+
+.form-div {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.wrapper {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  row-gap: 20px;
+  column-gap: 20px;
+}
+.card {
+  background-color: #000000;
+  background-image: linear-gradient(315deg, #000000 0%, #7f8c8d 74%);
+  text-align: center;
+  width: 300px;
+  border: 1px solid rgb(233, 233, 233);
+  box-shadow: 3px 1px 13px gray;
+  border-radius: 7px;
+  transition: 0.3s;
+}
+.card:hover {
+  transform: scale(1.05);
+  /* transition: 0.3s; */
+}
+.card p {
+  font-size: 20px;
+  padding: 10px 0;
+  color: white;
+  font-style: italic;
+  font-weight: 700;
+}
+.movie-img {
+  cursor: pointer;
+  width: 100%;
+  object-fit: contain;
+}
+.search-div {
+  text-align: center;
+  padding: 30px;
+}
+.search {
+  padding: 5px;
+  width: 200px;
+  font-size: 18px;
+  text-align: center;
+  transition: 0.4s;
+}
+.search:focus {
+  width: 300px;
+}
+.content {
+  background-image: url("./images/mainBg.jpg");
+}
+.asd {
+  padding: 30px 0;
+  background-color: #bdd4e7;
+  background-image: linear-gradient(315deg, #bdd4e7 0%, #8693ab 74%);
+}
+.middling {
+  align-items: center;
+}
+.movieInfo {
+  display: flex;
+  width: 90%;
+  padding-top: 100px;
+  margin: 10px auto;
+  min-height: 100vh;
+}
+.img-side {
+  width: 20%;
+}
+.img-side img {
+  width: 100%;
+}
+.img-side h3 {
+  text-align: center;
+  background-color: #5cb85c;
+  font-size: 22px;
+  font-weight: 500;
+  color: white;
+  width: 100%;
+  border-radius: 7px;
+  padding: 3px;
+}
+.info-side {
+  font-size: 18px;
+  color: white;
+  padding-left: 40px;
+  width: 70%;
+  line-height: 30px;
+}
+.info-side h1 {
+  font-weight: bold;
+  font-style: italic;
+}
+.colorized {
+  display: inline-block;
+  margin-top: 5px;
+  background-color: #5cb85c;
+  border-radius: 7px;
+  padding: 0 7px;
+  font-size: 18px;
+}
+.togline {
+  margin: 30px;
+  font-family: "Amatic SC", cursive;
+  color: #cd432c;
+  font-weight: 700;
+  font-size: 40px;
+}
+.container {
+  position: relative;
+}
+
+.image {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: 0.5s ease;
+  backface-visibility: hidden;
+}
+
+.middle {
+  transition: 0.5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.container:hover .image {
+  opacity: 0.3;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.container:hover .middle {
+  opacity: 1;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.text {
+  font-size: 16px;
+  padding: 10px 22px;
 }
-
-.App-link {
-  color: #61dafb;
+.fav-img {
+  width: 30px;
+  width: 40%;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.fav {
+  color: red;
+  text-align: center;
+  width: 80px;
+  margin-bottom: 50px;
+  cursor: pointer;
 }
